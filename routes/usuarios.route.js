@@ -326,7 +326,9 @@ router.get('/buscar-cancion-favorita', (req, res) => {
 
 
 router.get('/buscar-canciones-lista', (req, res) => {
-    Usuarios.find({ _id: req.body._id, 'listas_reproduccion._id': req.body.listas_reproduccion }, (error, canciones) => {
+    Usuarios.find({ _id: req.body._id }, {
+        'listas_reproduccion': { _id: req.body.listas_reproduccion }
+    }, (error, canciones) => {
         if (error) {
             res.json({
                 error
