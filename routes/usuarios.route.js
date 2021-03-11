@@ -124,7 +124,7 @@ router.post('/registrar-lista-cancion', (req, res) => {
     }, (error, cancion) => {
         if (error) {
             res.json({
-                'mensaje': 'No se agregó la canción a la lista',
+                'mensaje': 'No puedo agregar la canción a la lista',
                 error
             });
         } else {
