@@ -324,4 +324,26 @@ router.get('/buscar-cancion-favorita', (req, res) => {
 });
 
 
+
+router.get('/buscar-canciones-lista', (req, res) => {
+    Usuarios.find({ _id: req.body._id, 'listas_reproduccion._id': req.body.listas_reproduccion }, (error, canciones) => {
+        if (error) {
+            res.json({
+                error
+            });
+        } else {
+            if (canciones) {
+                res.json({
+                    canciones
+                });
+            } else {
+                res.json({
+                    'mensaje': 'Está vacío',
+                });
+            }
+        }
+    })
+});
+
+
 module.exports = router;
