@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo_negro.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="inicio_sesion/inicio_sesion.css">
+    <title>Inicia sesión</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="header__logo" src="img/logo_blanco.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio de sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registrarse/registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inicio_sesion_admin/inicio_sesion_admin.html">Administrador</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <section class="sesion mt-5 pt-5">
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label sesion__correo">Correo electrónico</label>
+                <div class="col-sm-10">
+                    <input required type="text" class="form-control sesion__correo-input" id="correo_electronico" placeholder="correo@ejemplo.com">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label sesion__contrasenna">Contraseña</label>
+                <div class="col-sm-10">
+                    <input required type="password" class="form-control sesion__contrasenna-input" id="contrasenna" placeholder="********">
+                </div>
+            </div>
+            <div class="pb-5">
+                <button type="button" class="btn btn-success" id="btn_inicio">Iniciar sesión</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__logo">
+                <img src="img/logo_blanco.png" alt="logo">
+            </div>
+            <div class="footer__texto">
+                <p>© Derechos reservados</p>
+                <p>Roy Zamora Amador</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="./registrarse/usuario.js"></script>
+    <script src="./inicio_sesion/usuarios.js"></script>
+    <script src="./inicio_sesion/inicio_sesion.js"></script>
+</body>
+
+</html>
